@@ -1,0 +1,17 @@
+{
+  "platform-version": "2.0",
+  "product": {
+    "freshservice": {
+      "location": {
+        "full_page_app": {
+          "url": "index.html",
+          "icon": "styles/images/aeroplane.svg"
+        }
+      }
+    }
+  },
+  "whitelisted-domains": [
+    "https://*.freshservice.com",
+    "https://official-joke-api.appspot.com"
+  ]
+}
