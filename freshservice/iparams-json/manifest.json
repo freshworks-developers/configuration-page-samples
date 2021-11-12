@@ -1,5 +1,5 @@
 {
-  "platform-version": "2.0",
+  "platform-version": "2.2",
   "product": {
     "freshservice": {
       "location": {
@@ -10,7 +10,9 @@
       }
     }
   },
-  "whitelisted-domains": [
-    "https://<%= iparam.creatorDomain %>.freshservice.com"
-  ]
+  "whitelisted-domains": ["https://<%= iparam.creatorDomain %>.freshservice.com"],
+  "engines": {
+    "node": "12.22.7",
+    "fdk": "7.1.0"
+  }
 }
