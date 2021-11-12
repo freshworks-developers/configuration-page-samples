@@ -30,6 +30,7 @@
         minlength="5"
         size="30"
         class="secure-field"
+         data-bind="product.api_key"
       ></fw-input>
 
       <fw-dropdown-button label="Select a Transformation" class="select-alien">
@@ -57,6 +58,7 @@
           label="domain"
           size="30"
           placeholder="subdomain.freshservice.com"
+          data-bind="product.domain"
           class="domain"
         ></fw-input>
       </section>
