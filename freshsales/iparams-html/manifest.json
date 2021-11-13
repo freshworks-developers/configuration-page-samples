@@ -10,10 +10,7 @@
       }
     }
   },
-  "whitelisted-domains": [
-    "https://*.freshsales.com",
-    "https://official-joke-api.appspot.com"
-  ],
+  "whitelisted-domains": ["https://*.freshsales.com", "https://official-joke-api.appspot.com"],
   "engines": {
     "node": "12.22.7",
     "fdk": "7.1.0"
