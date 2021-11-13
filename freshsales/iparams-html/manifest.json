@@ -1,7 +1,7 @@
 {
   "platform-version": "2.2",
   "product": {
-    "freshsales": {
+    "freshworks_crm": {
       "location": {
         "full_page_app": {
           "url": "index.html",
