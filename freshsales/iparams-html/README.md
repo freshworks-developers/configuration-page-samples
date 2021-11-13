@@ -1,4 +1,4 @@
-# Configuration page for freshdesk (ft. iparams.html)
+# Configuration page for Freshsales suite (ft. iparams.html)
 
 ### Description:
 
@@ -19,7 +19,7 @@ The sample app displaying the question with a witty answer.
 
 ### Prerequisites:
 
-1. Make sure you have a trial Freshdesk account created. You can always [sign up](https://freshdesk.com/signup)
+1. Make sure you have a trial freshsales suite account created. You can always [sign up](https://freshsales.com/signup)
 2. Ensure that you have the [Freshworks CLI](https://community.developers.freshworks.com/t/what-are-the-prerequisites-to-install-the-freshworks-cli/234) installed properly.
 
 ### Procedure to run the app:
@@ -50,5 +50,3 @@ Validation failed due to the following issue(s):
 > fdk pack
 # this validates first. hence .zip file is not generated
 ```
-
-✅ Feedback to support Async/Await is received. Please [upvote](https://community.developers.freshworks.com/t/async-await-not-supported-in-fdk/150/3) to get it prioritised.
