@@ -2,7 +2,7 @@ var client;
 
 (async function init() {
   client = await app.initialized();
-  client.events.on('app.activated', makeAPIcall);
+  client.events.on('app.activated', getContacts);
 })();
 
 async function getContacts() {
