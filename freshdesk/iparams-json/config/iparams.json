@@ -16,6 +16,7 @@
     "description": "freshdesk API requires app calls to include API keys in all of their requests",
     "secure": true,
     "type": "text",
+    "data-bind": "product.api_key",
     "required": true
   },
   "omnitrix": {
@@ -45,6 +46,7 @@
     "display_name": "Who is creator of Ben 10 cartoon series",
     "type": "domain",
     "description": "devrel",
+    "data-bind": "product.domain",
     "type_attributes": {
       "product": "freshdesk"
     }
