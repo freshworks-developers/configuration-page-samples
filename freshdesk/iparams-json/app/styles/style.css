@@ -8,7 +8,9 @@ html {
   box-sizing: inherit;
 }
 
-main {
+body {
   display: flex;
   flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
 }
