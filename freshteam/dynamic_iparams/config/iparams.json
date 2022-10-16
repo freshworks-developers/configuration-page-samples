@@ -1,0 +1,44 @@
+{
+	"domainName": {
+		"display_name": "Domain Name",
+		"description": "Please enter your domain name",
+		"type": "domain",
+		"type_attributes": {
+			"product": "freshteam"
+		},
+		"data-bind": "product.domain",
+		"required": true
+	},
+	"apiKey": {
+		"display_name": "API Key",
+		"description": "Please enter your api_key",
+		"type": "api_key",
+		"secure": true,
+		"required": true,
+		"type_attributes": {
+			"product": "freshteam"
+		}
+	},
+	"github_username": {
+		"display_name": "GitHub Username",
+		"description": "Please enter your Username",
+		"type": "text",
+		"required": true,
+		"events": [
+			{
+				"change": "checkUserName"
+			}
+		]
+	},
+	"name": {
+		"display_name": "Name",
+		"description": "Please enter the name",
+		"type": "text",
+		"required": true
+	},
+	"bio": {
+		"display_name": "Bio",
+		"description": "Please enter the Bio information",
+		"type": "paragraph"
+	}
+}
