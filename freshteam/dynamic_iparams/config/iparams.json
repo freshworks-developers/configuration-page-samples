@@ -19,7 +19,7 @@
 			"product": "freshteam"
 		}
 	},
-	"github_username": {
+	"githubUsername": {
 		"display_name": "GitHub Username",
 		"description": "Please enter your Username",
 		"type": "text",
