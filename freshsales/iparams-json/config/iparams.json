@@ -1,0 +1,68 @@
+{
+	"hero": {
+		"display_name": "Guess Ben's Last Name",
+		"description": "You can answer this!",
+		"type": "text",
+		"required": true,
+		"visible": true,
+		"secure": false,
+		"regex": {
+			"alphanumeric": "^[a-zA-Z0-9_]*$",
+			"alphanumeric-error": "Name validation failed"
+		}
+	},
+
+	"omnitrix": {
+		"display_name": "Select a transformation",
+		"type": "dropdown",
+		"options": [
+			"Cannonbolt",
+			"Heatblast",
+			"Four Arms",
+			"Grey Matter",
+			"Jetray",
+			"Humungousaur",
+			"Slapback",
+			"Goop",
+			"Way Big",
+			"Diamond Head"
+		],
+		"default_value": "Grey Matter",
+		"required": false,
+		"description": "Omnitrix is fully charged. Select a alien transformation"
+	},
+	"age": {
+		"display_name": "What is Ben's Age?",
+		"type": "number"
+	},
+	"domainName": {
+		"display_name": "Domain Name",
+		"description": "Please enter your domain name",
+		"type": "domain",
+		"data-bind": "product.domain",
+		"type_attributes": {
+			"product": "freshsales"
+		},
+		"required": true
+	},
+	"apiKey": {
+		"display_name": "API Key",
+		"description": "Please enter your api_key",
+		"type": "api_key",
+		"secure": true,
+		"required": true,
+		"type_attributes": {
+			"product": "freshsales"
+		}
+	},
+	"signature": {
+		"display_name": "Who created omnitrix",
+		"description": "Tip: Google it",
+		"type": "text",
+		"events": [
+			{
+				"change": "checkSignature"
+			}
+		]
+	}
+}
