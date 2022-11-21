@@ -40,11 +40,12 @@ async function validate() {
   };
 
   try {
-    let { status } = await client.request.get(URL, options);
-    if (status == 200) return true;
+    var res = JSON.parse(await client.request.get(URL, options));
+    var { status } = res;
+    if (status == 200) return '';
   } catch (error) {
     console.error(error);
-    return false;
+    if (status == 401) return 'Invalid API Key';
   }
 }
 
