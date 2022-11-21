@@ -10,9 +10,12 @@
       }
     }
   },
-  "whitelisted-domains": ["https://*.freshdesk.com", "https://official-joke-api.appspot.com"],
+  "whitelisted-domains": [
+    "https://*.freshdesk.com",
+    "https://official-joke-api.appspot.com"
+  ],
   "engines": {
-    "node": "12.22.7",
-    "fdk": "7.1.0"
+    "node": "14.20.0",
+    "fdk": "8.6.6"
   }
 }
