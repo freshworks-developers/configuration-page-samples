@@ -1,5 +1,5 @@
 {
-  "platform-version": "2.2",
+  "platform-version": "2.3",
   "product": {
     "freshworks_crm": {
       "location": {
@@ -7,12 +7,14 @@
           "url": "index.html",
           "icon": "styles/images/aeroplane.svg"
         }
+      },
+      "requests": {
+        "randomJokeAPI": {}
       }
     }
   },
-  "whitelisted-domains": ["https://*.freshsales.com", "https://official-joke-api.appspot.com"],
   "engines": {
-    "node": "12.22.7",
-    "fdk": "7.1.0"
+    "node": "18.13.0",
+    "fdk": "9.0.6"
   }
 }

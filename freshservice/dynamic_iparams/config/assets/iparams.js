@@ -41,7 +41,6 @@ function validateWithAPI(value) {
   // Disclaimer: The use of mock servers in production environment is disallowed. HttpBin.org can be used to debug or test your app's behavior locally.
   // However, this will not work when the app is deployed in a live account. We recommend switching to a middleware controlled by you in such scenarios.
   //Assume it is the validation/resource endpoint
-  var url = "https://httpbin.org/status/200";
   var options = {
     body: JSON.stringify({
       param: value,
@@ -52,7 +51,7 @@ function validateWithAPI(value) {
     // Wait for 500ms and if the user hasn't typed anything during that time, make a call
     clearTimeout(timeout);
     timeout = setTimeout(function () {
-      client.request.post(url, options).then(
+      client.request.invokeTemplate("validateAPI", options).then(
         function (data) {
           // Upon success, just resolve
           resolve();

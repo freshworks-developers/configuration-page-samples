@@ -1,0 +1,10 @@
+{
+  "randomJokeAPI": {
+    "schema": {
+      "protocol": "https",
+      "method": "GET",
+      "host": "official-joke-api.appspot.com",
+      "path": "/random_joke"
+    }
+  }
+}

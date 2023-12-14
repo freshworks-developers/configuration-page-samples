@@ -7,17 +7,17 @@ let domain = document.querySelector('.domain');
 let nameField = document.querySelector('.text-field');
 
 function postConfigs() {
-    return {
-      __meta: {
-        secure: ['apiKey']
-      },
-      api_key: apiKey.value,
-      transformation: selectedVal.value,
-      domain_url: domain.value,
-      name: nameField.value,
-      date: selectedDate.value
-    };
-  }
+  return {
+    __meta: {
+      secure: ['apiKey']
+    },
+    api_key: apiKey.value,
+    transformation: selectedVal.value,
+    domain_url: domain.value,
+    name: nameField.value,
+    date: selectedDate.value
+  };
+}
 
 function getConfigs(configs) {
   let { api_key, transformation, domain_url, name, date } = configs;
@@ -30,17 +30,15 @@ function getConfigs(configs) {
 }
 
 async function validate() {
-  let URL = `https://${domain.value}/api/v2/tickets`;
-  let base64Encoded = btoa(apiKey.value);
   let options = {
-    headers: {
-      Authorization: `Basic ${base64Encoded}`,
-      'Content-Type': 'application/json'
+    context: {
+      subdomain: domain.value,
+      api_key: apiKey.value
     }
   };
 
   try {
-    var res = JSON.parse(await client.request.get(URL, options));
+    var res = JSON.parse(await client.request.invokeTemplate("iparamValidate", options));
     var { status } = res;
     if (status == 200) return '';
   } catch (error) {

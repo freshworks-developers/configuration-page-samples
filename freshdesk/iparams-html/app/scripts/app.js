@@ -6,8 +6,7 @@ var client;
 })();
 
 async function getJoke() {
-  const JOKE_ENDPOINT = 'https://official-joke-api.appspot.com/random_joke';
-  let [err, data] = await to(client.request.get(JOKE_ENDPOINT));
+  let [err, data] = await to(client.request.invokeTemplate("randomJokeAPI"));
   if (err) {
     console.error('The Joke API is unavailable at the moment\nDetails:', err);
     pick('.spinner-div').style.display = 'none';

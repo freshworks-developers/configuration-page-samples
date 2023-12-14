@@ -1,0 +1,13 @@
+{
+    "validateAPI": {
+      "schema": {
+        "protocol": "https",
+        "method": "POST",
+        "host": "api.github.com",
+        "path": "/users/<%= context.user %>",
+        "headers": {
+            "user-agent": "Freshworks"
+        }
+      }
+    }
+  }

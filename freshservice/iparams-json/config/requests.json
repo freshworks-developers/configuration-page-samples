@@ -1,0 +1,14 @@
+{
+    "getAgentsAPI": {
+      "schema": {
+        "protocol": "https",
+        "method": "GET",
+        "host": "<%= iparam.creatorDomain %>.freshdesk.com",
+        "path": "/api/v2/agents/<%= iparam.agent_id %>",
+        "headers": {
+          "Authorization": "Basic <%= encode(iparam.api_key) %>",
+          "Content-Type": "application/json"
+        }
+      }
+    }
+  }
