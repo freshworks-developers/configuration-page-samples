@@ -13,18 +13,11 @@ function getClientAPI(_client) {
 }
 
 function makeAPIcall() {
-  var options = {
-    headers: {
-      Authorization: `Basic <%= encode(iparam.api_key) %>`, // substitution happens by platform
-      'Content-Type': 'application/json'
-    }
-  };
   client.iparams
     .get()
     .then(function (iparams) {
-      const URL = `https://${iparams.creatorDomain}.freshservice.com/api/v2/agents/${iparams.agent_id}`;
       client.request
-        .get(URL, options)
+        .invokeTemplate("getAgentsAPI")
         .then(function ({ response }) {
           let agentData = JSON.parse(response);
           document.getElementById('apptext').innerText = `Hey ${agentData['agent']['first_name']}, ${iparams.transformation} is my fav transformation too!, No Pinky Promise 😝`

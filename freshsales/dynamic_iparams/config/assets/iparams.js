@@ -6,13 +6,13 @@ var timeout
  * https://developers.freshsales.io/docs/installation-parameters/#
  */
 app.initialized().then(
-	function (_client) {
-		window.client = _client
-	},
-	function (error) {
-		//If unsuccessful
-		console.error(error)
-	}
+  function (_client) {
+    window.client = _client
+  },
+  function (error) {
+    //If unsuccessful
+    console.error(error)
+  }
 )
 
 /**
@@ -21,13 +21,13 @@ app.initialized().then(
  * @param {string} newValue The new value of the iparam field
  */
 function checkUserName(newValue) {
-	// Input type validation
-	if (!isNaN(newValue)) {
-		return Promise.reject("Username has to be a string")
-	}
-	// Validation will be performed based on the value
-	// A promise will be returned indicating the status of validation
-	return validateWithAPI(newValue)
+  // Input type validation
+  if (!isNaN(newValue)) {
+    return Promise.reject("Username has to be a string")
+  }
+  // Validation will be performed based on the value
+  // A promise will be returned indicating the status of validation
+  return validateWithAPI(newValue)
 }
 
 /**
@@ -39,31 +39,30 @@ function checkUserName(newValue) {
  * @param {string} value
  */
 function validateWithAPI(value) {
-	const url = `https://api.github.com/users/${value}`
-	const options = {
-		headers: {
-			"user-agent": "Freshworks"
-		}
-	}
-	return new Promise(function (resolve, reject) {
-		// Do not hit the validation API immediately upon change
-		// Wait for 500ms and if the user hasn't typed anything during that time, make a call
-		clearTimeout(timeout)
-		timeout = setTimeout(function () {
-			client.request.get(url, options).then(
-				function (data) {
-					// Upon success, assign name, bio & resolve
-					const response = JSON.parse(data.response)
-					const { name, bio } = response
-					utils.set("name", { value: name })
-					utils.set("bio", { value: bio })
-					resolve()
-				},
-				function (error) {
-					// Upon failure - send an appropriate validation error message
-					reject("This Username does not exist. Please enter the right one")
-				}
-			)
-		}, 500)
-	})
+  let options = {
+    context: {
+      "user": value
+    }
+  }
+  return new Promise(function (resolve, reject) {
+    // Do not hit the validation API immediately upon change
+    // Wait for 500ms and if the user hasn't typed anything during that time, make a call
+    clearTimeout(timeout)
+    timeout = setTimeout(function () {
+      client.request.invokeTemplate("validateAPI", options).then(
+        function (data) {
+          // Upon success, assign name, bio & resolve
+          const response = JSON.parse(data.response)
+          const { name, bio } = response
+          utils.set("name", { value: name })
+          utils.set("bio", { value: bio })
+          resolve()
+        },
+        function (error) {
+          // Upon failure - send an appropriate validation error message
+          reject("This Username does not exist. Please enter the right one")
+        }
+      )
+    }, 500)
+  })
 }

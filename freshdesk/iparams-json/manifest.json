@@ -1,5 +1,5 @@
 {
-  "platform-version": "2.2",
+  "platform-version": "2.3",
   "product": {
     "freshdesk": {
       "location": {
@@ -7,14 +7,14 @@
           "url": "index.html",
           "icon": "images/helicopter.svg"
         }
+      },
+      "requests": {
+        "getContactsAPI": {}
       }
     }
   },
-  "whitelisted-domains": [
-    "https://<%= iparam.creatorDomain %>.freshdesk.com"
-  ],
   "engines": {
-    "node": "12.22.7",
-    "fdk": "7.1.0"
+    "node": "18.13.0",
+    "fdk": "9.0.6"
   }
 }

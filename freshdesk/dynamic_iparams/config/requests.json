@@ -1,0 +1,10 @@
+{
+  "validateAPI": {
+    "schema": {
+      "protocol": "https",
+      "method": "POST",
+      "host": "httpbin.org",
+      "path": "/status/200"
+    }
+  }
+}
