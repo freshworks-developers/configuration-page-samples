@@ -6,5 +6,17 @@
       "host": "official-joke-api.appspot.com",
       "path": "/random_joke"
     }
+  },
+  "iparamValidate": {
+    "schema": {
+      "protocol": "https",
+      "method": "GET",
+      "host": "<%= context.subdomain %>.freshdesk.com",
+      "path": "/api/v2/tickets",
+      "headers": {
+        "Authorization": "Basic <%= encode(context.api_key) %>",
+        "Content-Type": "application/json"
+      }
+    }
   }
 }
