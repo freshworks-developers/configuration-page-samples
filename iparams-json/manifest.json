@@ -1,0 +1,33 @@
+{
+  "platform-version": "3.0",
+  "modules": {
+    "support_ticket": {
+      "location": {
+        "ticket_conversation_editor": {
+          "url": "index.html",
+          "icon": "styles/images/icon.svg"
+        }
+      }
+    },
+    "deal": {
+      "location": {
+        "deal_entity_menu": {
+          "url": "index.html",
+          "icon": "styles/images/icon.svg"
+        }
+      }
+    },
+    "sales_account": {
+      "location": {
+        "sales_account_entity_menu": {
+          "url": "index.html",
+          "icon": "styles/images/icon.svg"
+        }
+      }
+    }
+  },
+  "engines": {
+    "node": "18.13.0",
+    "fdk": "9.1.0"
+  }
+}

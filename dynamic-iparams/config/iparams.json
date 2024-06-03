@@ -1,0 +1,26 @@
+{
+  "domain_name": {
+     "display_name": "Freshdesk Domain Name",
+     "description": "Please enter your domain name",
+     "type": "text",
+     "required": true,
+     "events": [{
+      "change": "domainChange"
+    }]
+  },
+  "api_key": {
+     "display_name": "API Key",
+     "description": "Please enter your api_key",
+     "type": "text",
+     "secure": true,
+     "required": true
+  },
+   "validate": {
+     "display_name": "Validate account credentials",
+     "description": "Check this option if the account credentials entered has to be validated",
+     "type": "checkbox",
+     "events": [{
+      "change": "validateChange"
+    }]
+   }
+}
