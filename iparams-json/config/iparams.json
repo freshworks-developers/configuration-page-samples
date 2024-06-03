@@ -1,0 +1,36 @@
+{
+  "FreshdeskDomain": {
+    "display_name": "FreshdeskDomain",
+    "description": "Please enter your FreshdeskDomain",
+    "type": "text",
+    "required": true,
+    "modules": ["support_ticket"]
+  },
+  "FreshdeskAPIkey": {
+    "display_name": "FreshdeskAPIkey",
+    "description": "Please enter your FreshdeskAPIkey",
+    "type": "text",
+    "secure": true,
+    "required": true,
+    "modules": ["support_ticket"]
+  },
+  "Group": {
+    "display_name": "Group",
+    "description": "Please enter your Group",
+    "type": "dropdown",
+    "required": true,
+    "options": [
+      "opt1",
+      "opt2",
+      "opt3"
+    ],
+    "default_value": "opt1",
+    "modules": ["deal"]
+  },
+  "AccountName": {
+    "display_name": "AccountName",
+    "description": "Please enter your AccountName",
+    "type": "text",
+    "required": true
+  }
+}

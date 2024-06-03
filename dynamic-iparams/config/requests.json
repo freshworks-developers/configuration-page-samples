@@ -1,0 +1,14 @@
+{
+  "validateAPI": {
+    "schema": {
+      "protocol": "https",
+      "method": "GET",
+      "host": "<%= context.domain %>",
+      "path": "/api/v2/tickets",
+      "headers": {
+        "Authorization": "Basic <%= encode(context.api_key) %>",
+        "Content-Type": "application/json"
+      }
+    }
+  }
+}
