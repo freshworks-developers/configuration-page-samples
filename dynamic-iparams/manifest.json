@@ -12,15 +12,17 @@
         "validateAPI": {}
       }
     },
-    "support_ticket":{
-      "ticket_sidebar": {
-        "url": "index.html",
-        "icon": "styles/images/icon.svg"
+    "support_ticket": {
+      "location": {
+        "ticket_sidebar": {
+          "url": "index.html",
+          "icon": "styles/images/icon.svg"
+        }
       }
     }
   },
   "engines": {
-    "node": "18.13.0",
-    "fdk": "9.1.1"
+    "node": "24.11.0",
+    "fdk": "10.1.2"
   }
 }

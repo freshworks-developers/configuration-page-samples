@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CloudFleet Logistics — Installation</title>
+    <link rel="stylesheet" type="text/css" href="./assets/iparams.css" />
+    <script defer src="{{{appclient}}}"></script>
+  </head>
+  <body>
+    <div class="form">
+      <h2>CloudFleet Logistics</h2>
+      <p class="subtitle">Configure shipment tracking before agents use the app.</p>
+      <form>
+        <fw-input
+          class="account-name-field"
+          label="Account name"
+          placeholder="e.g. CloudFleet West"
+          required
+        ></fw-input>
+
+        <section class="support-section">
+          <h3>Freshdesk connection</h3>
+          <fw-input
+            class="freshdesk-domain-field"
+            label="Freshdesk domain"
+            placeholder="company.freshdesk.com"
+            required
+          ></fw-input>
+          <fw-input
+            class="freshdesk-api-key-field"
+            type="password"
+            label="Freshdesk API key"
+            required
+          ></fw-input>
+          <fw-input
+            class="tracking-api-key-field"
+            type="password"
+            label="Shipment tracking API key"
+            hint-text="Encrypted at rest — used for server-side API calls only"
+            required
+          ></fw-input>
+        </section>
+
+        <section class="deal-section">
+          <h3>CRM routing</h3>
+          <fw-select
+            class="deal-group-field"
+            label="Deal group"
+            placeholder="Choose a group"
+            required
+          >
+            <fw-select-option value="opt1">Enterprise shippers</fw-select-option>
+            <fw-select-option value="opt2">Regional partners</fw-select-option>
+            <fw-select-option value="opt3">SMB accounts</fw-select-option>
+          </fw-select>
+        </section>
+      </form>
+    </div>
+    <script defer src="./assets/iparams.js"></script>
+    <script
+      type="module"
+      src="https://cdn.jsdelivr.net/npm/@freshworks/crayons@v4/dist/crayons/crayons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://cdn.jsdelivr.net/npm/@freshworks/crayons@v4/dist/crayons/crayons.js"
+    ></script>
+  </body>
+</html>

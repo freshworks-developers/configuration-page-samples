@@ -1,20 +1,22 @@
-## Your First App
+# iparams-json — Static Installation Parameters
 
-This app displays the name of the requester of a freshdesk ticket in the ticket_sidebar placeholder
+CloudFleet Logistics sample demonstrating **static** installation parameters in `config/iparams.json` — module-scoped fields and secure API keys.
+
+### Highlights
+
+- `"modules": ["support_ticket"]` / `["deal"]` — fields appear only for subscribed products
+- `"secure": true` on `FreshdeskAPIkey` — encrypted at rest
+- Global `AccountName` — shared across products
 
 ### Files and Folders
-    .
-    ├── README.md                 A file for your future self and developer friends to learn about app
-    ├── app                       A folder to place all assets required for frontend components
-    │   ├── index.html            A landing page for the user to use the app
-    │   ├── scripts               JavaScript to place files frontend components business logic
-    │   │   └── app.js
-    │   └── styles                A folder to place all the styles for app
-    │       ├── images
-    │       │   └── icon.svg
-    │       └── style.css
-    ├── config                    A folder to place all the configuration files
-    │   └── iparams.json
-    └── manifest.json             A JSON file holding meta data for app to run on platform
 
-Explore [more of app sample apps](https://community.developers.freshworks.com/t/freshworks-sample-apps/3604) on the Freshworks github respository.
+```
+.
+├── README.md
+├── app/
+├── config/
+│   └── iparams.json
+└── manifest.json
+```
+
+**Toolchain:** Platform 3.0 · Node 24.11.0 · FDK 10.1.2

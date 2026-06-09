@@ -16,14 +16,6 @@
           "icon": "styles/images/icon.svg"
         }
       }
-    },
-    "sales_account": {
-      "location": {
-        "sales_account_entity_menu": {
-          "url": "index.html",
-          "icon": "styles/images/icon.svg"
-        }
-      }
     }
   },
   "engines": {
